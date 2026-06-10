@@ -185,7 +185,7 @@ fun PlayerScreen(
         return false
     }
 
-    LaunchedEffect(movieId, sources, initialPlaybackTriggered) {
+    LaunchedEffect(movieId, sources) {
         if (movieId.isBlank() || sources.isEmpty() || initialPlaybackTriggered) return@LaunchedEffect
         initialPlaybackTriggered = true
         val started = playSourceEpisode(currentSourceIndex, currentEpisodeIndex)
